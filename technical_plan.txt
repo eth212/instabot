@@ -1,0 +1,23 @@
+'''
+Free Plan:
+                                [the user interactions per day will vary based on space available in the Queue]
+   - gets to occupy remaining space at the end of the queue
+   - algorithm should take the number of free users and remaining queue size as inputs and output an order where each users gets to appear in the queue an equal number of times
+Paid Plan:
+                                [New Accounts should cost more than Long-term Accounts]
+   - Usage of Instagram's API to create filters/demographics of users in which to interact with using (who they follow, location, age...)
+   - Machine Learning Algorithm should be developed to use these demographics accurately
+   - Determine whether or not the user will be awake at using their time zone and restrict interactions to users that will be awake
+   - Maximize the daily usage
+   - Disperse the interactions through the hashtag's timeseries
+   - Use CNN to analyze images and generate more accurate comments
+
+Technical Plan:
+  using hashtags:
+                  switch accounts periodically (everytime an interaction takes place) using a QUEUE so every paid account is able to hit their maximal quota per minute
+                    -> as the paid users increases, the server load should increase to ensure that no paid user misses their optimal quota (the QUEUE is never full of paid users)
+                  Client's targeting similar demographics should indicate that the algorithm should store the NEXT hashtag target in a list which saves time
+                  attempt to distribute the interactions between hashtag posts (people often check if the account is a bot by looking at the closest posts within the hashtag)
+
+  Instagram API:
+                  search specified accounts for an the set of INTERSECTING followers and target those users
