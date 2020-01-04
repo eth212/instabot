@@ -9,6 +9,28 @@ from selenium.webdriver.common.by import By
 import random
 
 ''' instagram limits :
+Source # 1
+    Followers:
+        Account active for months:
+        follow/unfollow ~= 20 users per hour and 100-200 users per day
+        Account active for Years:
+        follow/unfollow ~= 50 users per hour and 300-400 users per day
+
+    Likes:
+        350 likes per hour
+
+Source # 2
+    Trusted accounts
+        Likes: 1 every 28 – 36 seconds, or 1000 at a time using scheduling tools -> 24-hour break after hitting the limit
+        Follows: 1 every 28 – 38 seconds, under 200 an hour. 1000 follows a day and below 200 an hour (1000 a day, with a 24-hour break);
+        Comments: under 12-14 an hour, with a 350 – 400-second break between each one
+        DMs: 50 to 100 DMs/day.
+    New accounts
+        For the first 12 to 20 days, you need to wait 36-48 seconds between any actions.
+        Daily limit is 500 actions a day (follow, unfollow, like).
+        New accounts can expect to send anywhere from 20-50 DMs/day
+
+'''
 
 
 chrome_options = Options()
